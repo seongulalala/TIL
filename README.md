@@ -161,7 +161,7 @@ $ git remote -v
 origin  https://github.com/edukyle/TIL.git (fetch)
 origin  https://github.com/edukyle/TIL.git (push)
 
-add를 이용해 추가했는 원격 저장소의 이름과 주소가 출력된다
+add를 이용해 추가했던 원격 저장소의 이름과 주소가 출력된다
 ```
 
 ### 3. 삭제
@@ -171,3 +171,14 @@ add를 이용해 추가했는 원격 저장소의 이름과 주소가 출력된�
 ```
 
 ## 2. 원격 저장소에 업로드
+### 1. 로컬 저장소에서 커밋 생성
+```
+# 현재 상태 확인
+$ git status
+```
+
+### 2. 원격 저장소에 업로드
+`git push <저장소 이름><브랜치 이름>`
+```
+$ git push origin master
+```
