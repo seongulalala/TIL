@@ -120,7 +120,7 @@ $ start folder
 
 ### 2. git status
 -   파일의 현재 상태를 알려주는 명령어
--   
+  
 ### 3. git add
 -   파일을 2번째 공간(Staging Area)로 올리는 명령어
   
@@ -137,7 +137,7 @@ $ git commit -m "first commit"
 
 ### 5. git log
 ```
-$ git log --online
+$ git log --oneline
 ```
 # 5. Gitbub
 - 코드를 저장하는 클라우드라고 생각하면 됨
