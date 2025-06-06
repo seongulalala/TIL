@@ -62,23 +62,32 @@ $ git branch -d 브랜치명
 
 ### 2. 흐름
 ```
-# fork를 통해 내 원격저장소로 복제
+# 1. Fork를 통해 내 GitHub 계정에 원본 저장소 복제
 
-# 내 원격저장소 > 내 로컬저장소
-$ git clone <내 원격저장소>
+# 2. 내 GitHub 원격 저장소 → 내 로컬로 복제
+$ git clone <내 원격 저장소 주소>
+$ cd <저장소 폴더명>
 
-# 내 로컬저장소와 원본 저장소 연결(동기화)
+# 3. 원본 저장소 연결 (동기화용)
 $ git remote add upstream <원본 저장소 주소>
 
-# 내 로컬에 브랜치 생성후 기능 구현
-$ git switch -c 브랜치명
+# 4. 내 로컬에 새 브랜치 생성 후 기능 구현
+$ git switch -c <브랜치명>
+# 👉 코드 수정 작업 후
 
-# 내 원격 저장소에 push
-$ git pull origin 브랜치명
+# 5. 변경사항 커밋
+$ git add .
+$ git commit -m "기능 또는 수정 내용 설명"
 
-# 원본 저장소에 PR 요청
+# 6. 내 원격 저장소에 푸시
+$ git push origin <브랜치명>
 
-# 브랜치 삭제
+# 7. GitHub 웹에서 원본 저장소로 PR 요청
+#    - base: 원본 저장소의 master/main
+#    - compare: 내 저장소의 브랜치
+
+# 8. PR merge 완료 후 브랜치 정리
 $ git switch master
-$ git pull upstream master
-$ fit branch -d <브랜치명명>
+$ git pull upstream master        # 최신 원본 반영
+$ git branch -d <브랜치명>        # 로컬 브랜치 삭제
+$ git push origin --delete <브랜치명>  # 원격 브랜치 삭제 (선택)
